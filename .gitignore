@@ -1,0 +1,36 @@
+# All dynamic/personal data lives here — generated during onboarding from
+# templates/, never shared via git. See README.md and CLAUDE.md for the
+# onboarding flow.
+/my-context/*
+!/my-context/assets/
+
+# assets/ itself must exist after a fresh clone (that's what makes it a
+# usable drop zone for files the user wants worked on — spreadsheets, etc.)
+# but whatever gets dropped in there is personal, never shared via git.
+/my-context/assets/*
+!/my-context/assets/.gitkeep
+
+# Task-urile sunt personale: fiecare utilizator își are propriul TASKS.md local, care nu se
+# publică niciodată (nici în repo-urile firmelor, unde restul din my-context/ se publică).
+/my-context/TASKS.md
+
+# Contextul comun al unei echipe (profil, oameni, proiecte, skill-uri) e date
+# de business: nu intră în repo-ul-șablon. Scheletul (team/skills/.gitkeep)
+# rămâne. O companie care își ține contextul într-un repo propriu poate
+# scoate regula asta din fork-ul ei.
+/team/*
+!/team/skills/
+/team/skills/*
+!/team/skills/.gitkeep
+
+# Pagină cu date reale despre oameni, hardcodate în HTML — nu e unealtă generică.
+/team-stats.html
+
+# Chei API / secrete pentru playbook-uri (ex. OPENAI_API_KEY pentru
+# generare de imagini/video) — niciodată în git. .env.example rămâne
+# tracked, ca oricine să știe ce variabile sunt așteptate.
+/.env
+/.env.*
+!/.env.example
+
+.DS_Store
